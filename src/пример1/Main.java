@@ -3,11 +3,13 @@ package пример1;
 public class Main {
     public static void main(String[] args) {
 
-        Singleton singleton=Singleton.getSingleton();
-        Singleton singleton2=Singleton.getSingleton();
+        final  int SIZE=1000;
+        Singleton arr[] =new Singleton[SIZE];
 
-        System.out.println(singleton);
-        System.out.println(singleton2);
+        for (int i=0;i<SIZE;i++){
+            arr[i]=Singleton.getSingleton();
+        }
+        System.out.println(Singleton.COUNT);
 
     }
 }
